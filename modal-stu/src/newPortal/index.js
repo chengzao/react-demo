@@ -1,0 +1,24 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class NewPortal extends React.Component {
+  constructor(props) {
+    super(props)
+    this.node = document.createElement('div');
+    document.body.appendChild(this.node);
+  }
+  componentWillUnmount() {
+    if (this.node) {
+      ReactDOM.unmountComponentAtNode(ReactDOM.findDOMNode(this.node).parentNode)
+      document.body.removeChild(this.node)
+    }
+  }
+  render() {
+    const { children } = this.props;
+    return ReactDOM.createPortal(
+      children,
+      this.node,
+    );
+  }
+}
+export default NewPortal

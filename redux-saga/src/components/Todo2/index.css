@@ -1,0 +1,16 @@
+.todolist{
+  padding: 10px;
+}
+
+.todolist .submitbutton{
+  margin-left: 10px;
+}
+
+.todolist .inputStyle{
+  width: 300px;
+}
+
+.todolist .listStyle{
+  width: 350px;
+  margin-top: 10px;
+}

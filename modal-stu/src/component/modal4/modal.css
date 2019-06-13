@@ -1,0 +1,188 @@
+.modal-select {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 123;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+
+  -webkit-tap-highlight-color: transparent;
+  -ms-touch-action: none;
+      touch-action: none;
+  will-change: opacity;
+}
+
+.modal-main {
+  width: calc(100% - 96px);
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  max-height: calc(100% - 96px);
+  margin: auto;
+  border-radius: 5px;
+  background: #fff;
+  padding: 10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 233;
+  outline: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2), 0px 24px 38px 3px rgba(0,0,0,0.14), 0px 9px 46px 8px rgba(0,0,0,0.12);
+         box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2), 0px 24px 38px 3px rgba(0,0,0,0.14), 0px 9px 46px 8px rgba(0,0,0,0.12);
+}
+
+.modal-main .modal-header {
+  width: 100%;
+  padding-left:10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #1976d2;
+}
+
+.modal-main .modal-header input{
+    outline: none;
+    color: currentColor;
+    width: 90%;
+    border: 0;
+    margin: 0;
+    padding: 6px 0 7px;
+    /* display: block; */
+    min-width: 0;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    background: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 1rem;
+    /* pointer-events: none; */
+}
+
+.modal-main .modal-header button{
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.modal-main .modal-content {
+  margin-top: 10px;
+  max-height: 120px;
+  overflow: auto;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.modal-main .modal-content .modal-content-item{
+  padding: 10px 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.modal-main .modal-content .modal-content-item.current{
+  background-color: #ccc;
+}
+
+/* .modal-main .modal-content .modal-content-item:hover{
+  background-color: #ccc;
+} */
+
+.modal-main .modal-footer{
+  padding: 8px 4px 0 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid rgba(33, 150, 243, 0.65);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+
+          -webkit-box-sizing: border-box;
+
+                  box-sizing: border-box;
+}
+
+.modal-main .modal-footer .modal-item{
+  display: inline-block;
+  color: #2196f3;
+
+  font-size: 0.875rem;
+  min-width: 64px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,-webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,-webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,-webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+
+
+/* animation */
+/* 开始出现,出现中,出现结束,开始消失,消失中,消失结束 */
+
+.modal-enter {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.modal-enter-active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.modal-enter-end {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.modal-leave {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.modal-leave-active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.modal-leave-end {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
