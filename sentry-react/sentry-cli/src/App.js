@@ -7,7 +7,7 @@ import Button from './Button'
 // 自建sentry服务的dsn组成部分
 // dsn: PROTOCOL://PUBLIC_KEY:SECRET_KEY@localhost:9000/PROJECT_ID
 Sentry.init({
-  dsn: "http://05bdfb274e91409294c125a71a2b4977:00a40ae1bc9141878bdf9546099ea7f0@localhost:9000/4" ,
+  dsn: "http://05bdfb27xxxxa2b4977:00a40ae1bxxxx099ea7f0@localhost:9000/4" ,
   release: 'react-sentry@20190711',
   environment: process.env.NODE_ENV
 });

@@ -1,0 +1,7 @@
+[defaults]
+url = http://localhost:9000
+org = sentry
+project = react-sentry
+
+[auth]
+token = 9210e5cccc6344da858beea81994cbf52d7c1770eb8342b5823d8b0f6ebfdbb4
