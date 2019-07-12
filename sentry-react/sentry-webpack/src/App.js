@@ -4,12 +4,12 @@ import './App.css';
 import * as Sentry from '@sentry/browser';
 
 import Button from './Button'
-// 自建sentry服务的dsn组成部分
-// dsn: PROTOCOL://PUBLIC_KEY:SECRET_KEY@localhost:9000/PROJECT_ID
+import sentry from "./sentry"
+
 Sentry.init({
-  dsn: "http://05bdfb27xxxa71a2b4977:00a40ae1bc9xxxx099ea7f0@localhost:9000/4" ,
-  release: 'react-sentry@20190711',
-  environment: process.env.NODE_ENV
+  dsn: sentry.dsn,
+  release: sentry.release,
+  environment: sentry.environment
 });
 
 function App() {
