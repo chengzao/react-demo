@@ -2,9 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class OldPortal extends React.Component {
-  constructor(props) {
-    super(props)
-  }
 
   // 初始化时根据visible属性来判断是否渲染
   componentDidMount() {

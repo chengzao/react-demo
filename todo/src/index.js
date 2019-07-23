@@ -7,8 +7,6 @@ import TodoList from './Todo';
 
 import store from './store'
 
-import './immutable'
-
 const App = (
   <Provider store={store}>
     <TodoList/>

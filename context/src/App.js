@@ -7,7 +7,6 @@ import MultiContext from './components/multiContext'
 import WithTheme from './components/withTheme'
 import FancyCom from './components/refs'
 import UseStateDemo from './components/useState'
-import RcSelect from './components/rcSelect'
 class App extends Component {
   render() {
     return (
@@ -19,7 +18,6 @@ class App extends Component {
         <WithTheme />
         <FancyCom />
         <UseStateDemo />
-        <RcSelect />
       </div>
     )
   }

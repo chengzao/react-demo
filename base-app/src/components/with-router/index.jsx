@@ -7,12 +7,12 @@ class withRouterCom extends React.Component{
     console.log(this.props)
   }
   componentWillMount(){
-    console.log(this.props.history.push('/with-router'))
+    this.props.history.push('/with-router')
   }
 
   render(){
     return (
-      <div> withRouter </div>
+      <div> common component withRouter </div>
     )
   }
 }

@@ -1,4 +1,0 @@
-- install mongo
-- node server/server.js
-- yarn
-- yarn start

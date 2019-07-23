@@ -64,12 +64,11 @@ class App extends Component {
               react transition group 2
             </NavLink>
           </p>
-          <RouterComp />
+          {/* <RouterComp /> */}
           <WithRouterComp />
           <Switch>
-            <Route
-              path="/"
-              exact
+            <Route path="/" exact component={RouterComp} />
+            <Route path="/home"
               render={() => {
                 return <div> Home Page</div>
               }}
@@ -80,7 +79,6 @@ class App extends Component {
             <Route path="/transtion" component={TransItem} />
             <Route path="/transtion2" component={TransItem2} />
             <Route path="/transtion3" component={TransItem3} />
-
             <Route
               render={() => {
                 return <div> Error Page Match! </div>

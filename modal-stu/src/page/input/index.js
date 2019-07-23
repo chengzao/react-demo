@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ModalLa from "../../component/modal4";
+import ModalLa from "../../component/modal";
 
 class SelectSearch extends Component {
   constructor() {
