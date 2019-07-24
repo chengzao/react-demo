@@ -5,6 +5,11 @@ import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-ro
 import UseState from './component/UseState'
 import UseEffect from './component/UseEffect'
 import UseReducer from './component/UseReducer'
+import UseContext from './component/UseContext'
+import UseRef from './component/UseRef'
+import UseCallback from './component/UseCallback'
+import CustomHook from './component/CustomHook'
+
 
 import AuthExample from './component/Auth'
 import OuterRouter from './component/WithRouter'
@@ -66,6 +71,18 @@ function App() {
             <Link to="/use-reducer">useReducer</Link>
           </li>
           <li>
+            <Link to="/use-context">useContext</Link>
+          </li>
+          <li>
+            <Link to="/use-ref">useRef</Link>
+          </li>
+          <li>
+            <Link to="/use-callback">UseCallback</Link>
+          </li>
+          <li>
+            <Link to="/custom-hook">CustomHook</Link>
+          </li>
+          <li>
               <Link to="/abc">abc redirect</Link>
           </li>
           <li>
@@ -85,6 +102,10 @@ function App() {
           <Route path="/use-state" exact component={UseState} />
           <Route path="/use-effect" exact component={UseEffect} />
           <Route path="/use-reducer" exact component={UseReducer} />
+          <Route path="/use-context" exact component={UseContext} />
+          <Route path="/use-ref" exact component={UseRef} />
+          <Route path="/use-callback" exact component={UseCallback} />
+          <Route path="/custom-hook" exact component={CustomHook} />
           <Redirect from="/abc" to="/topics" />
           <Route path="/topics" component={Topics} />
           <Route path="/auth" component={AuthExample} />
@@ -93,7 +114,6 @@ function App() {
         </Switch>
       </main>
       </Router>
-
     </div>
   );
 }

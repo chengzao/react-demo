@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import GetUid from './getUid'
+
 function UseEffect() {
   const [count, setCount] = useState(0);
 
@@ -15,6 +17,7 @@ function UseEffect() {
       <button onClick={() => setCount(count + 1)}>
         Click me
       </button>
+      <GetUid></GetUid>
     </div>
   );
 }

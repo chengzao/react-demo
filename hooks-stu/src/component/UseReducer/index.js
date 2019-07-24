@@ -1,28 +1,16 @@
-import React, { useReducer } from 'react'
+import React,{ Fragment } from 'react'
 
-// 初始 state
-const initialState = { count: 0 };
+import CounterInit from './Counter'
 
-function reducer(state, action) {
-  switch (action.type) {
-    case 'increment':
-      return { count: state.count + 1 };
-    case 'decrement':
-      return { count: state.count - 1 };
-    default:
-      throw new Error();
-  }
-}
+import CounterLazy from './CounterLazy'
 
-function Counter() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+function Counter (){
   return (
-    <div>
-      Count: {state.count}
-      <button onClick={() => dispatch({ type: 'increment' })}>+</button>
-      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
-    </div>
-  );
+    <Fragment>
+      <CounterInit />
+      <CounterLazy initialCount={0} />
+    </Fragment>
+  )
 }
 
 export default Counter

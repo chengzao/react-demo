@@ -3,6 +3,7 @@ import React,{useState} from 'react'
 import OldExample from './old'
 
 import Counter from './Counter'
+import CounterLazy from './CounterLazy'
 
 function UseState(props){
 
@@ -52,6 +53,7 @@ function UseState(props){
       }
       <hr/>
       <Counter initialCount={0} />
+      <CounterLazy initialCount={0} />
     </div>
   );
 }
