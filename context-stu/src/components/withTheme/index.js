@@ -18,7 +18,7 @@ const ThemeContext = React.createContext('light');
 
 function Button ({ theme, ...rest }) {
   console.log(theme, rest);
-  return <div>{theme}</div>;
+  return <div>withTheme: {theme}</div>;
 }
 
 export default withTheme(Button);

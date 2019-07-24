@@ -12,7 +12,7 @@ export default class ThemeButton extends Component {
         </ThemeButtonContext.Provider>
         <ThemeButtonContext.Consumer>
           {value => (
-            <div>App have no Provider Context Warp Default Value {value} !</div>
+            <div>App have no Provider Context Warp Default Value: {value} !</div>
           )}
         </ThemeButtonContext.Consumer>
       </div>

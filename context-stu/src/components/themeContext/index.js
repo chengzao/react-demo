@@ -28,10 +28,13 @@ export default class ThemeDemo extends React.Component {
     // 默认 dark theme
     return (
       <div>
+        <p>React theme context</p>
         <ThemeContext.Provider value={this.state.theme}>
           <Toolbar changeTheme={this.toggleTheme} />
+          <ThemedButton text='ThemeProvider 内' />
         </ThemeContext.Provider>
-        <ThemedButton />
+        {/* ThemeProvider 外 */}
+        <ThemedButton text='ThemeProvider 外' />
       </div>
     )
   }

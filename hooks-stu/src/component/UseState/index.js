@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 
 import OldExample from './old'
 
+import Counter from './Counter'
+
 function UseState(props){
 
   // 使用 useState 定义 state 变量时候，它返回一个有两个值的数组
@@ -40,7 +42,7 @@ function UseState(props){
       </button>
       <hr />
       <span>You clicked Change Words</span>
-      <button onClick={() => setTodos(function(parma){
+      <button onClick={() => setTodos(function(preState){
         return [{ text: 'Change Learn Hooks Words'}]
       })}>
         Click me
@@ -48,6 +50,8 @@ function UseState(props){
       {
         todos.map(item => <div key={item.text}>{item.text}</div>)
       }
+      <hr/>
+      <Counter initialCount={0} />
     </div>
   );
 }

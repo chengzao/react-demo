@@ -1,6 +1,8 @@
 # React Hooks
 
-[React Hooks](https://zh-hans.reactjs.org/docs/hooks-overview.html)
+- [React Hooks](https://zh-hans.reactjs.org/docs/hooks-overview.html)
+
+- [Hook API 索引](https://zh-hans.reactjs.org/docs/hooks-reference.html)
 
 ## Hook 规则
 
@@ -27,9 +29,12 @@
 ```js
 import React, { useState, useEffect } from 'react';
 
+// 自定义 hook
 function useFriendStatus(friendID) {
+  // 使用 useState
   const [isOnline, setIsOnline] = useState(null);
-
+  
+  // 使用useEffect
   useEffect(() => {
     function handleStatusChange(status) {
       setIsOnline(status.isOnline);

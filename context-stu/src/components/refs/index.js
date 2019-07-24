@@ -12,7 +12,8 @@ export default class FancyCom extends Component {
   render() {
     return (
       <div>
-        <FancyButton handleClick={this.handleClick} ref={this.fanc} />
+        <p>React createRef and forwardRef</p>
+        <FancyButton handleClick={this.handleClick} ref={this.fanc}>click me!</FancyButton>
         <CustomTextInput />
       </div>
     )
@@ -21,6 +22,6 @@ export default class FancyCom extends Component {
     console.log('ref', this.fanc)
   }
   handleClick(val) {
-    console.log('handleClick', val)
+    console.log('val: ', val)
   }
 }

@@ -19,7 +19,6 @@ class CustomTextInput extends React.Component {
     return (
       <div>
         <input type="text" ref={this.textInput} />
-
         <input
           type="button"
           value="Focus the text input"

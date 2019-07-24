@@ -11,12 +11,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ThemeButton />
-        <ThemeDemo />
-        <UpdateContext />
-        <MultiContext />
-        <WithTheme />
-        <FancyCom />
+        <hr/>
+        <ThemeButton /><hr />
+        <ThemeDemo /><hr />
+        <UpdateContext /><hr />
+        <MultiContext /><hr />
+        <WithTheme /><hr />
+        <FancyCom /><hr />
         <UseStateDemo />
       </div>
     )

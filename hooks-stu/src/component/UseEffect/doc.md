@@ -2,6 +2,37 @@
 
 - [hooks-effect](https://zh-hans.reactjs.org/docs/hooks-effect.html)
 
+该 Hook 接收一个包含命令式、且可能有副作用代码的函数
+
+## effect 的执行时机
+
+- useEffect 的函数会在组件渲染到屏幕之后执行
+
+- 清除函数会在组件卸载前执行
+
+- 与 `componentDidMount`、`componentDidUpdate` 不同的是，在浏览器完成布局与绘制之后，传给 useEffect 的函数会延迟调用
+
+## effect 的条件执行
+
+默认情况下，effect 会在每轮组件渲染完成后执行。这样的话，一旦 effect 的依赖发生变化，它就会被重新创建.
+
+解决方法：给 useEffect 传递第二个参数，它是 effect 所依赖的值数组
+
+- example
+
+```js
+useEffect(
+  () => {
+    // 只有当 props.source 改变后才会重新创建订阅
+    const subscription = props.source.subscribe();
+    return () => {
+      subscription.unsubscribe();
+    };
+  },
+  [props.source],
+);
+```
+
 ## 使用示例
 
 ```js
@@ -210,5 +241,37 @@ function FriendStatusWithCounter(props) {
     };
   });
   // ...
+}
+```
+
+## effect 的依赖频繁变化
+
+- [解决方法：setState 的函数式更新形式](https://zh-hans.reactjs.org/docs/hooks-faq.html#what-can-i-do-if-my-effect-dependencies-change-too-often)
+
+```js
+// function Counter() {
+//   const [count, setCount] = useState(0);
+
+//   useEffect(() => {
+//     const id = setInterval(() => {
+//       setCount(count + 1); // 这个 effect 依赖于 `count` state
+//     }, 1000);
+//     return () => clearInterval(id);
+//   }, []); // 🔴 Bug: `count` 没有被指定为依赖
+
+//   return <h1>{count}</h1>;
+// }
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCount(c => c + 1); // ✅ 在这不依赖于外部的 `count` 变量
+    }, 1000);
+    return () => clearInterval(id);
+  }, []); // ✅ 我们的 effect 不适用组件作用域中的任何变量
+
+  return <h1>{count}</h1>;
 }
 ```

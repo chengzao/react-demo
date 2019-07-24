@@ -25,9 +25,9 @@ function Toolbar (props) {
 
 export default class MultiContext extends React.Component {
   render () {
-    const { signedInUser, theme } = { theme: 'blue', signedInUser: 'MultiContext' };
+    const { signedInUser, theme } = { theme: 'dark', signedInUser: 'MultiContext' };
 
-    // App组件提供上下文的初始值
+    // 组件提供上下文的初始值
     return (
       <ThemeContext.Provider value={ theme }>
         <UserContext.Provider value={ signedInUser }>
