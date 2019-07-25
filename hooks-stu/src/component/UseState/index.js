@@ -6,6 +6,7 @@ import HookExample from './HookExample'
 import Counter from './Counter'
 import ClassCounter from './ClassCounter'
 import CounterLazy from './CounterLazy'
+import Todo from './Todo'
 import TodoList from './TodoList'
 
 
@@ -18,6 +19,7 @@ function UseState(){
       <ClassCounter />
       <Counter initialCount={0} />
       <CounterLazy initialCount={0} />
+      <Todo />
       <TodoList />
     </div>
   );

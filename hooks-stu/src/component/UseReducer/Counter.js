@@ -14,13 +14,24 @@ function reducer(state, action) {
   }
 }
 
+
+
 function Counter() {
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  const handleIncrease = () => {
+    dispatch({ type: 'increment' });
+  };
+
+  const handleDecrease = () => {
+    dispatch({ type: 'decrement' });
+  };
+
   return (
     <div>
       Count: {state.count}
-      <button onClick={() => dispatch({ type: 'increment' })}>+</button>
-      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+      <button onClick={handleIncrease}>+</button>
+      <button onClick={handleDecrease}>-</button>
     </div>
   );
 }

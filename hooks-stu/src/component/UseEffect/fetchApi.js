@@ -18,10 +18,11 @@ function SearchResults() {
     return () => { ignore = true; }
   }, [search]);
 
+  const handleChange = event => setQuery(event.target.value);
 
   return (
     <div>
-      <input value={query} onChange={e => setQuery(e.target.value)} />
+      <input value={query} onChange={handleChange} />
       <button type="button" onClick={() => setSearch(query)}>
         Search
       </button>

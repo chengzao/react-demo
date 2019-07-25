@@ -31,13 +31,17 @@ function SearchResults() {
     return () => { ignore = true; }
   }, [url]);
 
+  const handleSubmit = event => {
+    setUrl(`https://hn.algolia.com/api/v1/search?query=${query}`);
+    event.preventDefault();
+  }
+
+  const handleChange = event => setQuery(event.target.value);
+
   return (
     <div>
-      <form onSubmit={event => {
-        setUrl(`https://hn.algolia.com/api/v1/search?query=${query}`);
-        event.preventDefault();
-      }}>
-        <input value={query} onChange={e => setQuery(e.target.value)} />
+      <form onSubmit={handleSubmit}>
+        <input value={query} onChange={handleChange} />
         <button type="submit">Search</button>
         <button type="button" onClick={() => setDisplay(preVal => preVal = !preVal)}>{hide ? '展开' : '隐藏'}</button>
       </form>

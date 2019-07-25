@@ -7,6 +7,7 @@ import GetUid from './getUid'
 import FetchApi from './fetchApi'
 import FetchApiPro from './fetchApiPro'
 import FetchApiForm from './fetchApiForm'
+import Timer from './timer'
 
 function UseEffect() {
   return (
@@ -14,6 +15,7 @@ function UseEffect() {
       <ClassExample />
       <HookExample />
       <GetUid />
+      <Timer />
       <FetchApi />
       <FetchApiPro />
       <FetchApiForm />

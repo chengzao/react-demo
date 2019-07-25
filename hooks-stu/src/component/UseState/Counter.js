@@ -4,9 +4,8 @@ import React,{useState} from 'react'
 function Counter({ initialCount }) {
   const [count, setCount] = useState(initialCount);
 
-  function AddCount() {
-    const newCount = count + 1
-    setCount(newCount)
+  const AddCount = () => {
+    setCount(newCount => newCount+1)
   }
 
   return (
