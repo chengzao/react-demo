@@ -1,24 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { Fragment } from 'react';
+
+import ClassExample from './classExample'
+import HookExample from './classExample'
 
 import GetUid from './getUid'
+import FetchApi from './fetchApi'
+import FetchApiPro from './fetchApiPro'
+import FetchApiForm from './fetchApiForm'
 
 function UseEffect() {
-  const [count, setCount] = useState(0);
-
-  // 相当于 componentDidMount 和 componentDidUpdate:
-  useEffect(() => {
-    // 使用浏览器的 API 更新页面标题
-    document.title = `You clicked ${count} times`;
-  },[count]);
-
   return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-      <GetUid></GetUid>
-    </div>
+    <Fragment>
+      <ClassExample />
+      <HookExample />
+      <GetUid />
+      <FetchApi />
+      <FetchApiPro />
+      <FetchApiForm />
+    </Fragment>
   );
 }
 

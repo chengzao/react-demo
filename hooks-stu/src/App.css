@@ -12,3 +12,11 @@
 }
 .use-state button{margin-left: 20px}
 .red{color: red}
+.hide{display: none}
+button{
+  border: 0;
+  outline-style: none;
+  box-shadow: 0px 1px 2px 1px #a28fa2;
+  margin: 5px;
+  cursor: pointer;
+}

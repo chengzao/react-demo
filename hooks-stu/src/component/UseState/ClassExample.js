@@ -11,6 +11,7 @@ class Example extends React.Component {
   render() {
     return (
       <div>
+        <hr/>
         <p className="red">使用 class 的写法</p>
         <span>Old: You clicked {this.state.count} times</span>
         <button onClick={() => this.setState({ count: this.state.count + 1 })}>

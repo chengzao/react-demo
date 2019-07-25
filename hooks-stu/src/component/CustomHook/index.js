@@ -1,11 +1,13 @@
 import React,{ Fragment } from 'react'
 
-import UseClientRect from './UseClientRect'
+import UseClientRect from './useClientRect'
+import FetchApiExample from './fetchApiExample'
 
 function CustomHook(){
   return (
     <Fragment>
-      <UseClientRect></UseClientRect>
+      <UseClientRect />
+      <FetchApiExample />
     </Fragment>
   )
 }
