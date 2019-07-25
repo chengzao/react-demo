@@ -1,3 +1,14 @@
-import UserName from './UserProvider'
+import React,{Fragment} from 'react'
+import UserConsumer from './UserConsumer'
+import UserProvider from './UserProvider'
 
-export default UserName
+function User() {
+  return (
+    <Fragment>
+      <UserConsumer />
+      <UserProvider />
+    </Fragment>
+  )
+}
+
+export default User

@@ -15,7 +15,7 @@ function Counter({ initialCount }) {
 
   return (
     <div>
-      UseState Count: {count}
+      useState Counter Lazy: {count}
       <button onClick={() => setCount(initValue)}>Reset</button>
       <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
       <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>

@@ -5,6 +5,7 @@ const Pannel = () => (
   <UserConsumer>
     {({ username, handleChangeUsername }) => (
       <div>
+        <hr/>
         <p>不使用 useContext 需要调用 Consumer 包裹 children</p>
         <div>user name: {username}</div>
         <input onChange={e => handleChangeUsername(e.target.value)} />

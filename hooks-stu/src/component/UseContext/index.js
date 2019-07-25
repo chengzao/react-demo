@@ -7,7 +7,7 @@ import UserName from './User'
 function UseContext (){
   return (
     <div>
-      <p>UseContext</p>
+      <h1>UseContext</h1>
       <Counter></Counter>
       <UserName></UserName>
     </div>

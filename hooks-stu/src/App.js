@@ -10,35 +10,9 @@ import UseRef from './component/UseRef'
 import UseCallback from './component/UseCallback'
 import CustomHook from './component/CustomHook'
 
-
 import AuthExample from './component/Auth'
 import OuterRouter from './component/WithRouter'
-
-function Topic({ match }) {
-  return <h3>Requested Param: {match.params.id}</h3>;
-}
-
-function Topics({ match }) {
-  return (
-    <div>
-      <h2>Topics</h2>
-      <ul>
-        <li>
-          <Link to={`${match.url}/components`}>Components</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
-        </li>
-      </ul>
-      <Route path={`${match.path}/:id`} component={Topic} />
-      <Route
-        exact
-        path={match.path}
-        render={() => <h3>Please select a topic.</h3>}
-      />
-    </div>
-  );
-}
+import Topics from './component/Topics'
 
 function NoMatch({ location }) {
   return (
@@ -83,7 +57,7 @@ function App() {
             <Link to="/custom-hook">CustomHook</Link>
           </li>
           <li>
-              <Link to="/abc">abc redirect</Link>
+            <Link to="/redirect">redirect Topics</Link>
           </li>
           <li>
             <Link to="/topics">Topics</Link>
@@ -106,10 +80,10 @@ function App() {
           <Route path="/use-ref" exact component={UseRef} />
           <Route path="/use-callback" exact component={UseCallback} />
           <Route path="/custom-hook" exact component={CustomHook} />
-          <Redirect from="/abc" to="/topics" />
           <Route path="/topics" component={Topics} />
           <Route path="/auth" component={AuthExample} />
           <Route path="/with-router" component={OuterRouter} />
+          <Redirect from="/redirect" to="/topics" />
           <Route component={NoMatch} />
         </Switch>
       </main>

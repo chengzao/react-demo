@@ -5,7 +5,9 @@ function Counter() {
   const { state, dispatch } = useContext(counterContext);
   return (
     <div>
-      Counter Count: {state.count}
+      <hr/>
+      <p>useReducer and useContext </p>
+      Count: {state.count}
       <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
       <button onClick={() => dispatch({ type: "increment" })}>+</button>
       <button onClick={() => dispatch({ type: "decrement" })}>-</button>
