@@ -20,6 +20,7 @@ function MeasureExample() {
       {rect !== null &&
         <h2>The above header is {Math.round(rect.height)}px tall</h2>
       }
+      <hr/>
     </div>
   );
 }
