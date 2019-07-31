@@ -19,7 +19,7 @@ class Example extends React.Component {
   render() {
     return (
       <div>
-        <p>You clicked {this.state.count} times</p>
+        <span>ClassExample: You clicked {this.state.count} times</span>
         <button onClick={() => this.setState({ count: this.state.count + 1 })}>
           Click me
         </button>

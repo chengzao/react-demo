@@ -14,7 +14,7 @@ function Example() {
 
   return (
     <div>
-      <p>You clicked {count} times</p>
+      <span>HookExample: You clicked {count} times</span>
       <button onClick={() => setCount(count + 1)}>
         Click me
       </button>
