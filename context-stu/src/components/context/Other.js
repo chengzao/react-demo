@@ -5,6 +5,7 @@ import { ThemeButtonContext } from './ThemeButtonContext'
 export default class Other extends Component {
   static contextType = ThemeButtonContext
   render() {
+    console.log(this.context);
     return (
       <div className="other--red">
         <ThemeButtonContext.Consumer>
