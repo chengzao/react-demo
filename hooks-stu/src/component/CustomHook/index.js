@@ -1,12 +1,12 @@
-import React,{ Fragment } from 'react'
+import React, { Fragment } from "react";
 
-import UseClientRect from './useClientRect'
-import FetchApiExample from './fetchApiExample'
-import Offline from './useOffline'
-import UseIntervalCounter from './useInterval'
-import ClassIntervalCounter from './classInterval'
+import UseClientRect from "./useClientRect";
+import FetchApiExample from "./fetchApiExample";
+import Offline from "./useOffline";
+import UseIntervalCounter from "./useInterval";
+import ClassIntervalCounter from "./classInterval";
 
-function CustomHook(){
+function CustomHook() {
   return (
     <Fragment>
       <UseClientRect />
@@ -15,7 +15,7 @@ function CustomHook(){
       <UseIntervalCounter />
       <FetchApiExample />
     </Fragment>
-  )
+  );
 }
 
-export default CustomHook
+export default CustomHook;

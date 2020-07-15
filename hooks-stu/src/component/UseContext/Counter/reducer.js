@@ -16,8 +16,11 @@ function reducer(state, action) {
   }
 }
 
-const ContextProvider = props => {
-  const [state, dispatch] = useReducer(reducer, { count: 0 });
+const ContextProvider = (props) => {
+  const [state, dispatch] = useReducer(
+    reducer,
+    props.store ? props.store : initialState
+  );
   return (
     <counterContext.Provider value={{ state, dispatch }}>
       {props.children}
